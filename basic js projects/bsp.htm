@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    <!-- font awesome-->
+    <!-- for local copies of font awesome, ensure webfont folder is also in local root directory-->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <style>
+        button {
+            margin-top: 50vh;
+        margin-left: 600px;
+        height: 55px;
+        width: 160px;
+        color: rgb(0, 0, 0);
+        font-size: 25px;
+        background: transparent;
+        box-shadow: black 5px 6px;
+        text-shadow: red 1px 3px;
+        }
+    </style>
+    </head>
+<body>
+    <div class="container">
+        <div class="row max-height align-items-center text-center">
+            <div class="col">
+                <button class="btn btn-outline-secondary">Click Me!</button>
+            </div> 
+
+        </div>
+               
+    </div>
+    
+    <!--jQuery-->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!--bootstrap-->
+    
+    <script >//Choose a random color
+        const button = document.querySelector('button')
+        const body = document.querySelector('body')
+        const colors = ['red', 'green', 'blue', 'yellow', 'pink', 'purple']
+        
+        body.style.backgroundColor = 'violet'
+        button.addEventListener('click', changeBackground)
+        
+        function changeBackground(){
+        const colorIndex= parseInt(Math.random()*colors.length)
+        body.style.backgroundColor = colors[colorIndex]
+        }</script>
+</body>
+</html>
